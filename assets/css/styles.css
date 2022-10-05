@@ -1,0 +1,24 @@
+/* Reset glovas CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    color: black;
+    font-family: 'Montserrat', sans-serif;      /* Codigo importado desde fonts-google */
+}
+
+a {
+    text-decoration: none;          /* quito subbrayado*/
+    text-transform: uppercase;      /* letra mayuscula */
+    color: #0d3274;         
+}
+
+ul{
+    list-style: none;
+}
+
+
