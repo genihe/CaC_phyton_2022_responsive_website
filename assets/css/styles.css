@@ -9,11 +9,12 @@ body{
     background-color: white;
     color: black;
     font-family: 'Montserrat', sans-serif;      /* Codigo importado desde fonts-google */
+
 }
 
 a {
-    text-decoration: none;          /* quito subbrayado*/
-    text-transform: uppercase;      /* letra mayuscula */
+    text-decoration: none;              /* quito subbrayado*/
+    text-transform: uppercase;          /* letra mayuscula */
     color: #0d3274;         
 }
 
@@ -21,4 +22,56 @@ ul{
     list-style: none;
 }
 
+/* ---------------------- */
+.container{
+    width: 100%;
+    margin: 0;
+}
 
+
+/*------------------------------------------*/
+/*------------------NAVBAR------------------*/
+
+.nav-menu{
+    position: sticky;                   /* fijo el menu */
+    z-index: 5;                         /* lo coloco sobre el resto */
+    display: flex;                      /* uso diseño de caja */
+    align-items: center;                /* alineacion al centro */
+    justify-content: space-between;     /* distribuyo horizontamente con separacion entre cada elemento */
+
+}
+
+.nav-menu ul{
+    display: flex;                      /* cada ul se organizara en cajas para mostrarse en linea horizontal */
+}
+
+.nav-menu ul li{
+    /*padding: 5px 20px;*/
+    font-size: 12px;
+
+}
+
+.nav-menu ul li a{
+    padding: 10px 5px;
+}
+
+.nav-menu ul li a:hover{
+    background-color: #0d3274;
+    color: white;
+}
+
+.nav-logo{
+    width: 48px;
+}
+
+.burger-menu {
+    color: #0d3274;
+    font-size: 16px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;                      /* menu esta escondido, solo se vera cuando el width sea pequeño */
+  }
+
+/*------------------NAVBAR------------------*/
+/*------------------------------------------*/
