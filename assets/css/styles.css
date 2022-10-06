@@ -4,7 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+            
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-right: 0;
+} 
 
 h1, h2{
     text-transform: uppercase;
@@ -13,6 +18,7 @@ h1, h2{
 body{
     background-color: white;
     color: #333;
+    font-size: 18;
     font-family: 'Montserrat', sans-serif;      /* Codigo importado desde fonts-google */
 
 }
@@ -154,3 +160,42 @@ ul{
 .small-showcase-botton:hover{
     background-color: black;
 }
+
+.small-showcase-text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    margin: 20px;
+    align-items: center;
+}
+
+.small-showcase-text div{
+    margin-block: 10%;
+    background-color: #0d3274;
+    z-index: 10;
+    padding: 24px;
+}
+
+.small-showcase-text img{
+    width: 100%;
+}
+
+.small-showcase-text h2{
+    color: white;
+}
+.small-showcase-text p{
+    text-align: left;
+}
+.small-showcase-text ul{
+    padding-left: 32px;
+}
+.small-showcase-text ul li{
+    list-style: square;
+}
+
+
+
+
+
+
+
