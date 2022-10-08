@@ -73,7 +73,7 @@ ul{
     color: white;
 }
 
-.nav-menu ul li a::selection{
+.nav-menu ul li a:active{
     background-color: #0d3274;
     color: white;
 }
@@ -233,7 +233,44 @@ ul{
 }
 
 
+/*--------------------------------------------*/
+/*---------------CONTACT-FOOTER---------------*/
 
 
 
 
+
+
+/*--------------------------------------------*/
+/*-------------------FOOTER-------------------*/
+footer {
+    background-color: #919191;
+    padding: 1.25rem;
+    text-align: center;
+    margin: 2rem 0 0;
+  }
+  
+.copyright{
+    color: white;
+    font-size: 12px;
+
+}
+
+.copyright a {
+
+    color: white;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+  
+.copyright a:hover {
+    box-shadow: 0 5px 0 white;
+    cursor: pointer;
+    transition: all 0.1s ease-out
+}
+  
+.copyright a:active {
+    box-shadow: none;
+    top: 5px;
+}
