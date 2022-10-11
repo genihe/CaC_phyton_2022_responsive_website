@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: white;
+}
+
+main {
+    max-width: 880px;
+    width: 90%;
+    margin: auto;
+    padding: 48px;
+}
+
+.formulario{
+    display: grid;          /*habilito uso de columnos*/
+    grid-template-columns: 1fr 1fr;     /*uso dos columnas*/
+    gap: 20px;
+}
+
+.formulario__label{
+    display: block;         /*abarca 100%*/
+    font-weight: 700;
+    padding: 18px;
+    cursor: pointer;        /*resalta al pasar el cursor*/
+}
+
+.formulario__grupo-input{
+    position: relative;
+}
+
+.formulario__input{
+    width: 100%;
+    background: white;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.formulario__input:focus{
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.4);
+}
+
+.formulario__input-error{
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;      /*Se oculta el mensaje. Se mostrara cuando la validacion lo indique*/
+}
+
+.formulario__input-error-activo{
+    display: block;      /*Mouestro el mensaje.*/
+}
+
+.formulario__validacion-estado{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 10px;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formulario__checkbox{
+    margin-right: 10px;
+}
+
+.formulario__grupo-terminos,
+.formulario__mensaje,
+.formulario__grupo-btn-enviar{
+    grid-column: span 2;
+}
+
+.formulario__mensaje{
+    height: 45px;
+    line-height: 45px;
+    background-color: #f66860;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;          /*Solo se mostrara cuando el mensaje de error este activo*/
+}
+
+.formulario__mensaje-activo{
+    display: block;
+}
+
+.formulario__mensaje p{
+    margin: 0;
+}
+
+.formulario__grupo-btn-enviar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__btn{
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.formulario__btn:hover{
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario__mensaje-exito{
+    font-size: 14px;
+    color: #119200;
+    display: none;          /* solo se mostrara si todo esta correcto en el form*/
+}
+
+.formulario__mensaje-exito-activo{
+    display: block;
+}
+
+
+/* ----------------- Estilos para validacion ----------------- */
+.formulario__grupo-correcto .formulario__validacion-estado{
+    color: #1ed12d;
+    opacity: 1;
+}
+.formulario__grupo-incorrecto .formulario__label{
+    color: #bb2929;
+}
+.formulario__grupo-incorrecto .formulario__validacion-estado{
+    color: #bb2929;
+    opacity: 1;
+}
+.formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #bb2929;
+}
+
+/* ----------------- Mediaqueries ----------------- */
+@media screen and (max-width: 800px){
+    .formulario{
+        grid-template-columns: 1fr;     /*especificamos que queremos una sola columna. Sin embargo el grupo de terminos, enviar y mensaje seguiran ocupando 2 columnas*/
+    }
+    
+    .formulario__grupo-terminos,
+    .formulario__mensaje,
+    .formulario__grupo-btn-enviar{
+        grid-column: 1;
+    }
+
+    .formulario__btn{
+        width: 100%;
+    }
+}
