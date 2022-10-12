@@ -235,29 +235,85 @@ ul{
 
 /*--------------------------------------------*/
 /*---------------CONTACT-FOOTER---------------*/
+.contact-container {
+    background-color: #919191;
+    text-align: center;
+    padding: 1.25rem;
+    margin: 2rem 0 0;    
+}
 
+.three-rows{
+    display: grid;
+    width: 90%;
+    grid-template-columns: 25% 25% 50%;
+    gap: 4%;
+    text-align: left;
+}
 
+.contact-container div p {
+    color: white;
+    font-size: 12px;
+}
+
+.phone_n {
+    color: white;
+    font-size: 12px;
+    font-style: oblique;
+}
+
+.contact-botton{
+    cursor: pointer;
+    display: block;
+    padding: 10px 10px;
+    background-color: #0d3274;
+    color: white;
+    text-align: center;
+    transition: all 0.5s ease-out;
+    font-size: 2vw;
+}
+.contact-botton:hover{
+    background-color: black;
+}
 
 
 
 
 /*--------------------------------------------*/
+/*--------------SCROLL-UP-BUTTON--------------*/
+.scroll-up {
+    position: fixed;
+    right: 0.5%;
+    bottom: 3%;
+    cursor: pointer;
+}
+  
+.up-arrow {
+    width: 4rem;
+    height: 4rem;
+}
+
+/* .social-icons {
+    width: 2rem;
+    height: 2rem;
+} */
+
+
+
+/*--------------------------------------------*/
 /*-------------------FOOTER-------------------*/
-footer {
+footer{
     background-color: #919191;
     padding: 1.25rem;
     text-align: center;
-    margin: 2rem 0 0;
-  }
+    /* margin: 2rem 0 0; */
+}
   
 .copyright{
     color: white;
     font-size: 12px;
-
 }
 
 .copyright a {
-
     color: white;
     position: relative;
     text-decoration: none;
@@ -273,4 +329,42 @@ footer {
 .copyright a:active {
     box-shadow: none;
     top: 5px;
+}
+
+@media screen and (max-width: 780px){
+    .nav-menu ul.nav-items{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #0d3274;
+        height: 100%;
+        padding: 30px;
+        transform: translateX(-20px);
+    }
+
+    .nav-menu ul.nav-items li{
+        padding: 20px;
+        font-size: 16px;
+    }
+
+
+    .small-showcase{
+        display: grid;
+        grid-template-columns: 1fr;
+        /* color: white;
+        margin-left: 6%;
+        align-items: center; */
+    }
+
+
+    .small-showcase-text {
+        font-size: 2vw;
+    }
+
+    .about-us h2{
+        font-size: 3vw;
+    }
+
+
 }
