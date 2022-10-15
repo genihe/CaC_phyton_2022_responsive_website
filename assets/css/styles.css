@@ -27,7 +27,7 @@ body{
 a {
     text-decoration: none;              /* quito subbrayado*/
     text-transform: uppercase;          /* letra mayuscula */
-    color: #0d3274;         
+    color: #0d3274;
 }
 
 ul{
@@ -50,26 +50,21 @@ ul{
     display: flex;                      /* uso diseño de caja */
     align-items: center;                /* alineacion al centro */
     justify-content: space-between;     /* distribuyo horizontamente con separacion entre cada elemento */
-
+    height: 64px;
 }
 
 .nav-menu ul{
     display: flex;                      /* cada ul se organizara en cajas para mostrarse en linea horizontal */
-}
-
-.nav-menu ul li{
-    /*padding: 5px 20px;*/
-    font-size: 12px;
-
+    height: 100%;
+    align-items: center;
 }
 
 .nav-menu ul li a{
-    padding: 16px 10px;
+    padding: 24px 16px;
 }
 
-
 .nav-menu ul li a:hover{
-    background-color: #0d3274;
+    background: #0d3274;
     color: white;
 }
 
@@ -332,22 +327,66 @@ footer{
     top: 5px;
 }
 
+
+
+
+
 @media screen and (max-width: 780px){
     .nav-menu ul.nav-items{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #0d3274;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        transition: transform 0.5s ease-in;
+    }
+    /* ul.nav-items{
+        width: 100%;
+        position: fixed;
+        background: #0d3274 ;
+        flex-direction: column;
+        text-align: center;
+        transition: transform 0.5s ease-in;
+    } */
+
+    .nav-items li{
+        width: 100%;
+        /* padding: 20px; */
+        font-size: 16px;
+    }
+
+    ul.nav-items li a{
+        display: block;
+        /* padding: 24px 16px; */
+        color: white;
+    }
+
+    ul.nav-items li a:hover{
+        /* padding: 24px 16px; */
+        background: black;
+        width: inherit;
+
+    }
+
+    /* .nav-menu ul.nav-items{
         display: block;
         position: absolute;
         top: 0;
         left: 0;
         background: #0d3274;
-        height: 100%;
-        padding: 30px;
-        transform: translateX(-20px);
-    }
+        height: 100%; */
+        /* padding: 30px; */
+        /* transform: translateX(-20px); */
+    /* } */
 
-    .nav-menu ul.nav-items li{
-        padding: 20px;
-        font-size: 16px;
-    }
+
+
+
+
+
 
 
     .small-showcase{
