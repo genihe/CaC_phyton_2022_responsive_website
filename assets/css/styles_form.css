@@ -1,24 +1,25 @@
-*{
+/* *{
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Courier New', Courier, monospace;
     background: #e5e5e5;
-}
+    color: #333;
+} */
 
-main {
+/* main {
     max-width: 880px;
     width: 90%;
     margin: auto;
     padding: 48px;
-}
+} */
 
-.formulario{
-    display: grid;          /*habilito uso de columnos*/
-    grid-template-columns: 1fr 1fr;     /*uso dos columnas*/
-    gap: 20px;
-}
+/* .formulario{ */
+    /* display: grid;          /*habilito uso de columnos*/
+    /* grid-template-columns: 1fr 1fr;     /*uso dos columnas*/
+    /* gap: 20px;
+} */
 
 .formulario__label{
     display: block;         /*abarca 100%*/
@@ -34,12 +35,26 @@ main {
 .formulario__input{
     width: 100%;
     background: white;
-    border: 3px solid transparent;
-    border-radius: 3px;
-    height: 45px;
-    line-height: 45px;
-    padding: 0 40px 0 10px;
+    /* border: 3px solid transparent; */
+    /* border-radius: 3px; */
+    border: 1.5px solid rgba(163,163,163,0.4);
+    height: 2rem;
+    line-height: 2rem;
+    padding: 2.5px 5px;
     transition: .3s ease all;
+}
+
+textarea{
+    resize: vertical;
+    box-sizing:border-box;
+    width: 100%;
+    min-height: 204px;
+}
+
+.container-two-rows{
+    display: grid;          /*habilito uso de columnos*/
+    grid-template-columns: 1fr 1fr;     /*uso dos columnas*/
+    gap: 20px;
 }
 
 .formulario__input:focus{
@@ -103,8 +118,9 @@ main {
 .formulario__btn{
     height: 45px;
     line-height: 45px;
-    width: 30%;
-    background: black;
+    width: 50%;
+    /* background: black; */
+    background: #0d3270;
     color: white;
     font-weight: bold;
     border: none;
@@ -114,7 +130,9 @@ main {
 }
 
 .formulario__btn:hover{
-    box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+    /* box-shadow: 3px 0px 30px rgba(163,163,163, 1); */
+    background: black;
+    transition: all 0.5s ease-out;
 }
 
 .formulario__mensaje-exito{
@@ -146,7 +164,7 @@ main {
 
 /* ----------------- Mediaqueries ----------------- */
 @media screen and (max-width: 800px){
-    .formulario{
+    .container-two-rows{
         grid-template-columns: 1fr;     /*especificamos que queremos una sola columna. Sin embargo el grupo de terminos, enviar y mensaje seguiran ocupando 2 columnas*/
     }
     
