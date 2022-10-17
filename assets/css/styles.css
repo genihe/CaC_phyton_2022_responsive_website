@@ -270,7 +270,10 @@ ul{
 }
 .contact-botton:hover{
     background-color: black;
+    transition: all 0.5s ease-out;
 }
+
+
 
 .icon-style{
     font-size: 2rem;
@@ -363,16 +366,6 @@ footer{
         transform: translateY(0px);
     }
 
-
-    /* ul.nav-items{
-        width: 100%;
-        position: fixed;
-        background: #0d3274 ;
-        flex-direction: column;
-        text-align: center;
-        transition: transform 0.5s ease-in;
-    } */
-
     .nav-items li{
         width: 100%;
         /* padding: 20px; */
@@ -392,30 +385,15 @@ footer{
 
     }
 
-    /* .nav-menu ul.nav-items{
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: #0d3274;
-        height: 100%; */
-        /* padding: 30px; */
-        /* transform: translateX(-20px); */
-    /* } */
     .small-showcase{
         display: grid;
         grid-template-columns: 1fr;
-        /* color: white;
-        margin-left: 6%;
-        align-items: center; */
     }
 
     .burger-menu {
         display: block;                      /* menu esta escondido, solo se vera cuando el width sea pequeño */
     }
     
-
-
     .small-showcase-text {
         font-size: 2vw;
     }
