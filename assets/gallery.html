@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles_gallery.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="full-img-box" id="full-img-box">
+        <img src="images/image1.png" id="full-img" alt="">
+        <span onclick="closeImg()">X</span>
+    </div>
+    <h1>Galeria de imagenes</h1>
+    <span class="linea"></span>
+    <section class="img-gallery">
+        <img src="images/image1.png" onclick="openFullImg(this.src)" alt="">
+        <img src="images/image2.png" onclick="openFullImg(this.src)" alt="">
+        <img src="images/image1.png" onclick="openFullImg(this.src)" alt="">
+        <img src="images/image2.png" onclick="openFullImg(this.src)" alt="">
+        <img src="images/image1.png" onclick="openFullImg(this.src)" alt="">
+        <img src="images/image2.png" onclick="openFullImg(this.src)" alt="">
+    </section>
+
+    <script src="js/gallery.js"></script>
+</body>
+</html>
