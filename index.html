@@ -232,6 +232,28 @@
             </form>
         </section>
         
+
+
+
+
+        <div id="data" ><!-- Content here -->
+        </div>
+        
+        <script>
+            fetch('https://randomuser.me/api')
+                .then(datos => datos.json()) 
+                .then(datos => {
+                    data.innerHTML +=
+                        `<div class="member-card">
+                            <img src = "${datos.results[0].picture.large}"</img><br>
+                            ${datos.results[0].name.last}, ${datos.results[0].name.first}<br>
+                            ${datos.results[0].email}
+                        </div>`
+                })
+        </script>
+
+
+
         <!-- About Us -->
         <section class="about-us" id="about_us"> 
             <h2 class="about-us-text">
