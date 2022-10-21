@@ -236,7 +236,7 @@
 
 
 
-        <div id="data" ><!-- Content here -->
+        <!-- <div id="data" >
         </div>
         
         <script>
@@ -250,7 +250,10 @@
                             ${datos.results[0].email}
                         </div>`
                 })
-        </script>
+        </script> -->
+
+
+
 
 
 
@@ -260,8 +263,9 @@
                 Quienes somos
             </h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, dolorum, soluta quaerat exercitationem assumenda nihil et aut corrupti maiores mollitia qui, accusamus quod magni nulla perspiciatis obcaecati numquam ullam pariatur.</p>
-            <div class="members">
-                <div>
+            <div class="members" id="data">
+                
+                <!-- <div>
                     <h3>John Doe</h3>
                     <p><img src="" alt="John Doe"></p>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, excepturi.</p>
@@ -275,13 +279,12 @@
                     <h3>John Doe</h3>
                     <p><img src="" alt="John Doe"></p>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, excepturi.</p>
-                </div>
-
+                </div> -->
             </div>
             <!--Localizacion (mapa)-->
             <div class="location-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.1481816958244!2d-60.939707399463735!3d-34.59666669827302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b8ead901cc4f7d%3A0x67fbf7c409dd6f09!2sVicente%20L%C3%B3pez%20y%20Planes%20299%2C%20Jun%C3%ADn%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1664381156737!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2760.354525146601!2d-60.96059736719381!3d-34.60855835402875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1666393966133!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <!--<img src="assets/images/casa-o-departamento.jpg" alt="imagen-inmuebles" loading="lazy" class="image-main"/>-->
         </section>
@@ -346,6 +349,31 @@
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/formulario.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+
+    <!-- -------- uso de api -------- -->
+    <script>
+        fetch('https://randomuser.me/api')
+            .then(data => data.json()) 
+            .then(data => mostrarData(data))
+            
+        const mostrarData = (data) => {
+            console.log(data)
+            let body = ''
+            for (let i=0; i<3; i++) {
+                console.log(typeof(i))
+                body +=
+            
+                `<div class="members-box">
+                    <p><img src="${data.results[0].picture.large}" alt="${data.results[0].name.last}, ${data.results[0].name.first}"></p>
+                    <h3>${data.results[0].name.last}, ${data.results[0].name.first} </h3>
+                    <p>${data.results[0].email}</p>
+                </div>  
+                `
+            }
+            document.getElementById('data').innerHTML = body
+        }
+    </script>
 
     
 </body>

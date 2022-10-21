@@ -239,14 +239,19 @@ ul{
     grid-template-columns: repeat(3, 1fr);
 }
 
+
+
 .members > div{
     text-align: center;
+    height: 100%;
+    width: 100%;
 }
 
 .members img{
     border: #333 solid 1px;
     border-radius: 100%;
 }
+
 
 .location-map iframe{
     padding: 2rem 0;
@@ -434,11 +439,19 @@ footer{
         font-size: 10px;
         /* font-size: 1vw; */
     }
+
+    .members-box{
+        width: 128px;
+    }
+
 }
 
 @media screen and (max-width: 480px){
     .nav-menu ul.nav-items{
         width: 100%;
         transform: translateX(480px); 
+    }
+    .members{
+        grid-template-columns: 1fr;
     }
 }
