@@ -20,6 +20,9 @@ h2{
     margin: 2rem 0 8px 0;
 }
 
+/* hr {border: 0; height: 0; box-shadow: 0 1px 5px 1px #0d3274;} */
+hr {border: 3px solid #0d3274; border-radius: 300px/10px; height: 10px; text-align: center;}
+
 body{
     background-color: white;
     color: #333;
@@ -78,7 +81,8 @@ ul{
 }
 
 .nav-logo{
-    width: 48px;
+    padding-left: 30px;
+    width: 160px;
 }
 
 .burger-menu {

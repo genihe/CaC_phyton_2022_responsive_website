@@ -1,4 +1,4 @@
-*{
+/* *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -13,14 +13,14 @@ h1{
     text-align: center;
     padding: 20px 0;
     font-size: 1rem;
-}
+} 
 
 .linea{
     background: #0d3274;
     height: 4px;
     width: 100%;
     display: block;
-}
+} */
 
 .img-gallery{
     display: grid;
@@ -65,9 +65,9 @@ h1{
  
 .full-img-box span{
     position: absolute;
-    top: 5%;
-    right: 5%;
+    top: 10%;
+    right: 10%;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 4rem;
     color: white;
 }
