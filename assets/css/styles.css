@@ -9,6 +9,7 @@ ul {
     list-style-type: none;
     margin-left: 0;
     padding-right: 0;
+    list-style: none;
 } 
 
 h1, h2, h3{
@@ -21,6 +22,7 @@ h2{
 }
 
 /* hr {border: 0; height: 0; box-shadow: 0 1px 5px 1px #0d3274;} */
+/* Linea separadora de secciones */
 hr {border: 3px solid #0d3274; border-radius: 300px/10px; height: 10px; text-align: center;}
 
 body{
@@ -28,7 +30,6 @@ body{
     color: #333;
     font-size: 18;
     font-family: 'Montserrat', sans-serif;      /* Codigo importado desde fonts-google */
-
 }
 
 a {
@@ -37,9 +38,10 @@ a {
     color: #0d3274;
 }
 
-ul{
-    list-style: none;
+.p-description{
+    margin: 30px 0;
 }
+
 
 /* ---------------------- */
 /* .container{
@@ -156,7 +158,7 @@ ul{
 }
 .more-about p {
     text-align: center;
-    margin: 30px 0;
+    /* margin: 30px 0; */
 }
 
 
@@ -216,45 +218,80 @@ ul{
 
 
 
-.benefits{
+.benefits {
     width: 100%;
 }
 
-.benefits div ul{
-    display: flex;
-    justify-content: center;
+.benefits img{
+    width: 70%;
+    margin: auto;
+    display: block;
+    padding: 2rem 0;
 }
+
+/* .benefits-row{
+    display: grid;
+} */
+
+/* .benefits-row div{
+    text-align: center;
+    
+} */
 
 .benefits-enumerations{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    text-align: center;
+    padding: 2rem 0;    
 }
 
-.benefits div ul li{
+/* .benefits div div li{
     text-align: center;
     float:left;
     margin: 2rem 3%;
-}
+} */
 
 /*--------------------------------------------*/
 /*------------------ABOUT US------------------*/
 .members{
     display: grid;
+    padding: 2rem 0;
     grid-template-columns: repeat(3, 1fr);
+    /* background: linear-gradient(30deg, transparent 10%, #0d3274 10%, #0d3274 90%, transparent 10%); */
 }
 
-
+/* .members-box {
+    background: linear-gradient(30deg, transparent 10%, #0d3274 10%, #0d3274 90%, transparent 10%);
+    
+} */
 
 .members > div{
     text-align: center;
     height: 100%;
-    width: 100%;
+    width: 100%;    
 }
 
-.members img{
-    border: #333 solid 1px;
-    border-radius: 100%;
+/* .members img{
+    border: #333 dotted 6px;
+    border-radius: 1rem;
+} */
+
+.members img {
+    position: relative;
+    /* width: 64px;
+    height: 64px; */
+    background: white;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+    color: white;
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+    transition: all .4s ease;
+    margin-bottom: 1rem;
 }
+
+/* .members img:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+    box-shadow: 15px 15px rgba(0,0,0,.25);
+  } */
 
 
 .location-map iframe{
@@ -448,6 +485,10 @@ footer{
         width: 128px;
     }
 
+    .benefits-enumerations{
+        grid-template-columns: repeat(3, 1fr);  
+    }
+
 }
 
 @media screen and (max-width: 480px){
@@ -458,4 +499,9 @@ footer{
     .members{
         grid-template-columns: 1fr;
     }
+
+    .benefits-enumerations{
+        grid-template-columns: repeat(2, 1fr);        
+    }
+
 }

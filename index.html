@@ -122,37 +122,41 @@
             <hr class="break-line"></hr>
             <h2>Beneficios</h2>
             <div class="benefits-enumerations">
-                <ul>
-                    <li>
-                        <span class="material-symbols-outlined">done</span><br/>
-                        <span>Transparencia</span>
-                    </li>
-                    <li>
-                        <span class="material-symbols-outlined">done</span>
-                        <br/><span>Sencillez</span>
-                    </li>
-                    <li>
-                        <span class="material-symbols-outlined">done</span><br/>
-                        <span>Claridad</span>
-                    </li>
-                    <li>
-                        <span class="material-symbols-outlined">done</span><br/>
-                        <span>Seguridad</span>
-                    </li>
-                    <li><span class="material-symbols-outlined">done</span><br/>
-                        <span>Responsabilidad</span>
-                    </li>
-                    <li>
-                        <span class="material-symbols-outlined">done</span><br/>
-                        <span>Propiedad</span>
-                    </li>
-                </ul>
+                <!-- <div class="benefits-row"> -->
                 <div>
-                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <strong>Saepe ad odit animi sed velit nulla reprehenderit illum inventore</strong>, voluptatem sint consectetur perspiciatis iusto assumenda laudantium. <strong>At in perferendis ea quisquam</strong>, sit dignissimos voluptatibus quis tempore eius nesciunt similique voluptatum soluta consectetur, nemo delectus minima quidem laboriosam quod et libero ratione!</p>
+                    <span class="material-symbols-outlined">done</span><br/>
+                    <span>Transparencia</span>
                 </div>
-                <img src="assets/images/depto_living.jpg" alt="Living-VIP">
+                <div>
+                    <span class="material-symbols-outlined">done</span>
+                    <br/><span>Sencillez</span>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined">done</span><br/>
+                    <span>Claridad</span>
+                </div>
+            <!-- </div> -->
+            <!-- <div class="benefits-row"> -->
+                <div>
+                    <span class="material-symbols-outlined">done</span><br/>
+                    <span>Seguridad</span>
+                </div>
+                <div><span class="material-symbols-outlined">done</span><br/>
+                    <span>Responsabilidad</span>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined">done</span><br/>
+                    <span>Propiedad</span>
+                </div>
+                <!-- </div> -->
             </div>
+            <div>
+                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                <p class="p-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <strong>Saepe ad odit animi sed velit nulla reprehenderit illum inventore</strong>, voluptatem sint consectetur perspiciatis iusto assumenda laudantium. <strong>At in perferendis ea quisquam</strong>, sit dignissimos voluptatibus quis tempore eius nesciunt similique voluptatum soluta consectetur, nemo delectus minima quidem laboriosam quod et libero ratione!</p>
+            </div>
+            <img src="assets/images/depto_living.jpg" alt="Living-VIP">
+            <p class="p-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <strong>Saepe ad odit animi sed velit nulla reprehenderit illum inventore</strong>, voluptatem sint consectetur perspiciatis iusto assumenda laudantium. <strong>At in perferendis ea quisquam</strong></p>
+
         </section>
 
         <!-- Projects -->
@@ -167,6 +171,7 @@
             <hr class="break-line"></hr>
 
             <h2>Proyectos de inversion</h2>
+            <p class="p-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <strong>Saepe ad odit animi sed velit nulla reprehenderit illum inventore</strong>, voluptatem sint consectetur perspiciatis iusto assumenda laudantium. <strong>At in perferendis ea quisquam</strong>, sit dignissimos voluptatibus quis tempore eius nesciunt similique voluptatum soluta consectetur, nemo delectus minima quidem laboriosam quod et libero ratione!</p>
             <section class="img-gallery">
                 <img src="assets/images/image1.png" onclick="openFullImg(this.src)" alt="">
                 <img src="assets/images/image2.png" onclick="openFullImg(this.src)" alt="">
@@ -183,7 +188,7 @@
             <h2 class="about-us-text">
                 Quienes somos
             </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, dolorum, soluta quaerat exercitationem assumenda nihil et aut corrupti maiores mollitia qui, accusamus quod magni nulla perspiciatis obcaecati numquam ullam pariatur.</p>
+            <p class="p-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, dolorum, soluta quaerat exercitationem assumenda nihil et aut corrupti maiores mollitia qui, accusamus quod magni nulla perspiciatis obcaecati numquam ullam pariatur.</p>
             <div class="members" id="data">
                 <!-- <div>
                     <h3>John Doe</h3>
@@ -280,6 +285,7 @@
                     <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formuladio enviado exitosamente</p>
                 </div>
             </form>
+            <p class="p-description"><small>ipsum dolor sit amet consectetur adipisicing elit. Deleniti reprehenderit iusto inventore a, velit culpa!</small></p>
         </section>
 
         <!-- Contact and Social accounts section - Fixed to the right-->
@@ -303,8 +309,12 @@
                     call
                 </span>
                 <p class="phone"><a class="phone_n" href="tel:+541234567890">012 - 3456 7890</a></p>
+                <span class="material-symbols-outlined icon-style">
+                    mail
+                </span>
                 <div>
-                    <a href="#contact" class="contact-botton">Contactanos</a>
+                    <a href="mailto:newhouse@email.com?&subject=Mail desde el sitio NewHouse&body=Estimados de NewHouse" target="_blank" class="contact-botton">Contactanos</a>
+                    <!-- <a href="#contact" class="contact-botton">Contactanos</a> -->
                 </div>
             </div>
             <div>
@@ -353,8 +363,7 @@
             for (let i=0; i<3; i++) {
                 console.log(typeof(i))
                 body +=
-            
-                `<div class="members-box">
+                `<div class=".members-box">
                     <p><img src="${data.results[0].picture.large}" alt="${data.results[0].name.last}, ${data.results[0].name.first}"></p>
                     <h3>${data.results[0].name.last}, ${data.results[0].name.first} </h3>
                     <p>${data.results[0].email}</p>
