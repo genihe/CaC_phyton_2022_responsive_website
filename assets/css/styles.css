@@ -416,6 +416,35 @@ footer{
     top: 5px;
 }
 
+
+
+.eater-egg {
+    position: relative;
+}
+ 
+.eater-egg:hover::after {
+    content: attr(data-title);
+    background: #333;
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    z-index: 1;
+}
+
+
+
+
+/* ############################################################ */
+/* ############################################################ */
+
 @media screen and (max-width: 720px){
     .nav-menu ul.nav-items{
         display: block;
@@ -493,8 +522,9 @@ footer{
 
 @media screen and (max-width: 480px){
     .nav-menu ul.nav-items{
-        width: 100%;
-        transform: translateX(480px); 
+        width: 100vw;
+        transform: translateX(480px);
+        text-align: left; 
     }
     .members{
         grid-template-columns: 1fr;

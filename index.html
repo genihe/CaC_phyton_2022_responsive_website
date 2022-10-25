@@ -162,7 +162,7 @@
         <!-- Projects -->
         <section class="projects" id="projects">
             <div class="full-img-box" id="full-img-box">
-                <img src="images/image1.png" id="full-img" alt="">
+                <img src="assets/images/image1.png" id="full-img" alt="">
                 <!-- <span onclick="closeImg()">X</span> -->
                 <span onclick="closeImg()" class="material-symbols-outlined">
                     cancel
@@ -338,8 +338,12 @@
         <p class="copyright">&copy; Copyright 2022</p>
         <p class="copyright">
             <!-- Link a parte con los integrante (solo idea) -->
-            <a href="#" target="_blank"><strong>Grupo 33</strong></a> - Codo a Codo 2022
+            <a class="eater-egg" href="#" target="_blank" data-title="Fornario Mauro Heuer Germán Nicolás Petenello, Nicolás" ><strong>Grupo 33</strong></a> - Codo a Codo 2022
+            <!-- <a class="eater-egg" href="#" target="_blank" title="Fornario, Mauro&#10Heuer, Germán Nicolás&#10Petenello, Nicolás" ><strong>Grupo 33</strong></a> - Codo a Codo 2022 -->
         </p>
+
+
+
     </footer>
 
 
@@ -353,6 +357,30 @@
 
     <!-- -------- uso de api -------- -->
     <script>
+        let api_url= 'https://randomuser.me/api'
+        let api_data=''
+        for(let i=0; i<3; i++){
+            fetch(api_url)
+                .then(data => data.json()) 
+                .then(data => mostrarData(data))
+            
+            const mostrarData = (data) => {
+                let body = ''
+                    body =
+                    `<div class=".members-box">
+                        <p><img src="${data.results[0].picture.large}" alt="${data.results[0].name.last}, ${data.results[0].name.first}"></p>
+                        <h3>${data.results[0].name.last}, ${data.results[0].name.first} </h3>
+                        <p>${data.results[0].email}</p>
+                    </div>  
+                    `
+                    api_data += body
+                    /*console.log(api_data)*/
+                    document.getElementById('data').innerHTML = api_data
+                }
+        }
+    </script>
+
+    <!-- <script>
         fetch('https://randomuser.me/api')
             .then(data => data.json()) 
             .then(data => mostrarData(data))
@@ -372,7 +400,7 @@
             }
             document.getElementById('data').innerHTML = body
         }
-    </script>
+    </script> -->
 
     
 </body>
